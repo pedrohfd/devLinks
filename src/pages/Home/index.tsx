@@ -7,12 +7,20 @@ import {
   Profile,
   SocialLink,
   SocialLinks,
+  Switch,
+  SwitchArea,
+  SwitchTrack,
 } from './styles'
 
 import avatar from '../../assets/avatar.png'
 import IonIcon from '@reacticons/ionicons'
 
-export const Home = () => {
+interface HomeProps {
+  handleToggleTheme: () => void
+  theme: 'light' | 'dark'
+}
+
+export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
   return (
     <Container>
       <Profile>
@@ -23,6 +31,12 @@ export const Home = () => {
 
         <Name>@pedrohfd</Name>
       </Profile>
+
+      <SwitchArea onClick={handleToggleTheme}>
+        <Switch actualTheme={theme} />
+        <SwitchTrack />
+      </SwitchArea>
+
       <List>
         <li>
           <Link href='https://github.com/pedrohfd' target='_blank'>
@@ -50,10 +64,10 @@ export const Home = () => {
         <SocialLink href='https://github.com/pedrohfd' target='_blank'>
           <IonIcon name='logo-github' />
         </SocialLink>
-        <SocialLink>
+        <SocialLink href='https://wa.me/5515991082862' target='_blank'>
           <IonIcon name='logo-whatsapp' />
         </SocialLink>
-        <SocialLink>
+        <SocialLink href='https://linkedin.com/in/pedrohfd' target='_blank'>
           <IonIcon name='logo-linkedin' />
         </SocialLink>
       </SocialLinks>

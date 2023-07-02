@@ -1,7 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
-import bgMobile from '../assets/bg-mobile.jpg'
 
-export const GlobalStyle = createGlobalStyle`
+interface ThemeProps {
+  theme: {
+    textColor: string
+    bgUrl: string
+  }
+}
+
+export const GlobalStyle = createGlobalStyle<Partial<ThemeProps>>`
   * {
     margin: 0;
     padding: 0;
@@ -9,11 +15,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: url(${bgMobile}) no-repeat top center/cover;
+    background: ${(props) => props.theme.bgUrl} no-repeat top center/cover;
   }
 
   body * {
     font-family: 'Inter', sans-serif;
-    color: #fff;
+    color: ${(props) => props.theme.textColor};
   }
 `
