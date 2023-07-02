@@ -20,7 +20,11 @@ export const Container = styled.div`
 
   padding: 0 1.5rem;
 
-  margin: 3.5rem auto 0;
+  margin: 1.25rem auto 0;
+
+  @media (min-width: 700px) {
+    margin-top: 3.5rem;
+  }
 `
 
 export const Profile = styled.div`
