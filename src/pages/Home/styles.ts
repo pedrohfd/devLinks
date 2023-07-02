@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 
 interface ThemeProps {
   actualTheme: 'light' | 'dark'
@@ -46,6 +46,24 @@ export const SwitchArea = styled.div`
   margin: 0.25rem auto;
 `
 
+const slideIn = keyframes`
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+`
+
+const slideOut = keyframes`
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+`
+
 export const Switch = styled.button<ThemeProps>`
   width: 2rem;
   height: 2rem;
@@ -57,9 +75,21 @@ export const Switch = styled.button<ThemeProps>`
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: ${(props) => (props.actualTheme === 'dark' ? '0' : 'initial')};
-  right: ${(props) => (props.actualTheme === 'dark' ? 'initial' : '0')};
+
+  animation: ${(props) =>
+    props.actualTheme === 'light'
+      ? css`
+          ${slideIn} 0.2s forwards
+        `
+      : css`
+          ${slideOut} 0.2s
+        `};
   transform: translateY(-50%);
+
+  &:hover {
+    cursor: pointer;
+    outline: 0.5rem solid ${(props) => props.theme.socialLinkHover};
+  }
 `
 
 export const SwitchTrack = styled.span<Partial<ThemeProps>>`
