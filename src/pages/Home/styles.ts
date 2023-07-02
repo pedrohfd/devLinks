@@ -15,7 +15,8 @@ interface ThemeProps {
 }
 
 export const Container = styled.div`
-  width: 22.5rem;
+  max-width: 36.75rem;
+  width: 100%;
 
   padding: 0 1.5rem;
 
