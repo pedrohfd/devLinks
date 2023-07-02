@@ -9,7 +9,7 @@ const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
 
   const handleToggleTheme = () => {
-    theme === 'dark' ? setTheme('dark') : setTheme('light')
+    theme === 'dark' ? setTheme('light') : setTheme('dark')
   }
 
   return (
