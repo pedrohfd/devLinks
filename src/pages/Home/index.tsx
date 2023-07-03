@@ -54,7 +54,10 @@ export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
           </Link>
         </li>
         <li>
-          <Link href='#' target='_blank'>
+          <Link
+            href='mailto:pedrohenriquefrancadedeus@gmail.com'
+            target='_blank'
+          >
             Fale comigo
           </Link>
         </li>
