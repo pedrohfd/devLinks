@@ -90,9 +90,11 @@ export const Switch = styled.button<ThemeProps>`
         `};
   transform: translateY(-50%);
 
-  &:hover {
-    cursor: pointer;
-    outline: 0.5rem solid ${(props) => props.theme.socialLinkHover};
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      outline: 0.5rem solid ${(props) => props.theme.socialLinkHover};
+    }
   }
 `
 
@@ -137,9 +139,11 @@ export const Link = styled.a<Partial<ThemeProps>>`
 
   transition: background 0.2s;
 
-  &:hover {
-    background: ${(props) => props.theme.surfaceColorHover};
-    border: 1px solid ${(props) => props.theme.strokeColorHover};
+  @media (hover: hover) {
+    &:hover {
+      background: ${(props) => props.theme.surfaceColorHover};
+      border: 1px solid ${(props) => props.theme.strokeColorHover};
+    }
   }
 `
 
@@ -162,7 +166,9 @@ export const SocialLink = styled.a<Partial<ThemeProps>>`
 
   transition: background 0.2s;
 
-  &:hover {
-    background: ${(props) => props.theme.socialLinkHover};
+  @media (hover: hover) {
+    &:hover {
+      background: ${(props) => props.theme.socialLinkHover};
+    }
   }
 `
