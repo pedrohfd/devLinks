@@ -14,6 +14,7 @@ import {
 
 import avatar from '../../assets/avatar.png'
 import IonIcon from '@reacticons/ionicons'
+import PDF from '../../assets/Currículo.pdf'
 
 interface HomeProps {
   handleToggleTheme: () => void
@@ -44,7 +45,7 @@ export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
           </Link>
         </li>
         <li>
-          <Link href='#' target='_blank'>
+          <Link href={PDF} download='Currículo' target='_blank'>
             Meu currículo
           </Link>
         </li>
