@@ -1,10 +1,7 @@
 import {
-  Avatar,
   Container,
   Link,
   List,
-  Name,
-  Profile,
   SocialLink,
   SocialLinks,
   Switch,
@@ -12,9 +9,9 @@ import {
   SwitchTrack,
 } from './styles'
 
-import avatar from '../../assets/avatar.webp'
 import IonIcon from '@reacticons/ionicons'
 import PDF from '../../assets/Currículo.pdf'
+import { Profile } from '../../components/Profile'
 
 interface HomeProps {
   handleToggleTheme: () => void
@@ -24,14 +21,7 @@ interface HomeProps {
 export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
   return (
     <Container>
-      <Profile>
-        <Avatar
-          src={avatar}
-          alt='Foto de Pedro Henrique sorrindo, usando camisa preta, barba e fundo desfocado.'
-        />
-
-        <Name>@pedrohfd</Name>
-      </Profile>
+      <Profile />
 
       <SwitchArea onClick={handleToggleTheme}>
         <Switch
