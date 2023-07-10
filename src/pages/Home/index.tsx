@@ -34,7 +34,10 @@ export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
       </Profile>
 
       <SwitchArea onClick={handleToggleTheme}>
-        <Switch actualTheme={theme} />
+        <Switch
+          actualTheme={theme}
+          name='Botão do tipo switch para a mudança de tema de escuro para claro'
+        />
         <SwitchTrack />
       </SwitchArea>
 
