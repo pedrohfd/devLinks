@@ -33,7 +33,10 @@ export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
         <Name>@pedrohfd</Name>
       </Profile>
 
-      <SwitchArea onClick={handleToggleTheme}>
+      <SwitchArea
+        onClick={handleToggleTheme}
+        aria-label='Botão do tipo switch para a mudança de tema de escuro para claro'
+      >
         <Switch
           actualTheme={theme}
           name='Botão do tipo switch para a mudança de tema de escuro para claro'
