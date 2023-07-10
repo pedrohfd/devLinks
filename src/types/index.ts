@@ -11,3 +11,8 @@ export interface ThemeProps {
     switchBgUrl: string
   }
 }
+
+export interface HomeProps {
+  handleToggleTheme: () => void
+  theme: 'light' | 'dark'
+}

@@ -1,35 +1,17 @@
-import {
-  Container,
-  Link,
-  List,
-  SocialLink,
-  SocialLinks,
-  Switch,
-  SwitchArea,
-  SwitchTrack,
-} from './styles'
+import { Container, Link, List, SocialLink, SocialLinks } from './styles'
 
 import IonIcon from '@reacticons/ionicons'
 import PDF from '../../assets/Currículo.pdf'
 import { Profile } from '../../components/Profile'
-
-interface HomeProps {
-  handleToggleTheme: () => void
-  theme: 'light' | 'dark'
-}
+import { HomeProps } from '../../types'
+import { Switch } from '../../components/Switch'
 
 export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
   return (
     <Container>
       <Profile />
 
-      <SwitchArea onClick={handleToggleTheme}>
-        <Switch
-          actualTheme={theme}
-          name='Botão do tipo switch para a mudança de tema de escuro para claro'
-        />
-        <SwitchTrack />
-      </SwitchArea>
+      <Switch handleToggleTheme={handleToggleTheme} theme={theme} />
 
       <List>
         <li>
