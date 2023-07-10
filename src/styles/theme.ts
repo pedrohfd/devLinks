@@ -1,7 +1,7 @@
-import bgMobileDark from '../assets/bg-mobile.jpg'
-import bgDesktopDark from '../assets/bg-desktop.jpg'
-import bgMobileLight from '../assets/bg-mobile-light.jpg'
-import bgDesktopLight from '../assets/bg-desktop-light.jpg'
+import bgMobileDark from '../assets/bg-mobile.webp'
+import bgDesktopDark from '../assets/bg-desktop.webp'
+import bgMobileLight from '../assets/bg-mobile-light.webp'
+import bgDesktopLight from '../assets/bg-desktop-light.webp'
 import switchBgDark from '../assets/moon-stars.svg'
 import switchBgLight from '../assets/sun.svg'
 

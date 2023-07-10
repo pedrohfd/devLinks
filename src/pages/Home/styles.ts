@@ -34,6 +34,7 @@ export const Profile = styled.div`
 
 export const Avatar = styled.img`
   width: 7rem;
+  border-radius: 50%;
 `
 
 export const Name = styled.p`

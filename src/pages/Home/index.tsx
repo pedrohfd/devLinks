@@ -12,7 +12,7 @@ import {
   SwitchTrack,
 } from './styles'
 
-import avatar from '../../assets/avatar.png'
+import avatar from '../../assets/avatar.webp'
 import IonIcon from '@reacticons/ionicons'
 import PDF from '../../assets/Currículo.pdf'
 
