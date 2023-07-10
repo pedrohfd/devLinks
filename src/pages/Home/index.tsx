@@ -24,11 +24,11 @@ export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
             Meu currículo
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href='#' target='_blank'>
             Meus certificados
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href='mailto:pedrohenriquefrancadedeus@gmail.com'
