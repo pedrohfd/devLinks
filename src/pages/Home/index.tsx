@@ -34,7 +34,7 @@ export const Home = ({ handleToggleTheme, theme }: HomeProps) => {
             href='mailto:pedrohenriquefrancadedeus@gmail.com'
             target='_blank'
           >
-            Fale comigo
+            Me envie um email
           </Link>
         </li>
       </List>
